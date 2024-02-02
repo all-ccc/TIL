@@ -9,7 +9,7 @@ for test in range(1, T+1):
     # M : 열의 수 5
 
     # 종이 꽃가루 개수 들어간 2차원 리스트
-    data = [[list(map(int, input().split()))] for _ in range(M)]
+    data = [list(map(int, input().split())) for _ in range(N)]
 
     #           상  하  좌  우
     delta_row = [-1, 1, 0, 0]
@@ -30,7 +30,7 @@ for test in range(1, T+1):
                 if 0 > next_row or next_row > N:
                     flower += data[next_row][next_col]
                 else:   # data 안에 위치하지 않을 때
-                    flower += 0
+                    continue
                 # out of range 뜨는데 data 안에 위치하지 않을 때를 조건 첫번째로 해야 하는지
 
             flower_lst.append(flower)
