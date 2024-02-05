@@ -1,5 +1,5 @@
 import sys
-# sys.stdin = open('input.txt')
+sys.stdin = open('input.txt')
 
 for test in range(1, 11):
     N = int(input())
@@ -26,16 +26,13 @@ for test in range(1, 11):
     col_max = max(col_list) # 열의 합 중 최대
 
     # 대각선의 합 구하는 반복문 1
-    dia_sum_1 = 0
+    dia_sum_R = 0
+    dia_sum_L = 0
     for i in range(100):
-        dia_sum_1 += num_list[i][i]
-        dia_list.append(dia_sum_1)
-
-    # 대각선의 합 구하는 반복문 2
-    dia_sum_2 = 0
-    for i in range(99, -1, -1):
-        dia_sum_2 += num_list[i][i]
-        dia_list.append(dia_sum_2)
+        dia_sum_R += num_list[i][i]
+        dia_sum_L += num_list[99-i][i]
+        dia_list.append(dia_sum_R)
+        dia_list.append(dia_sum_L)
 
     dia_max = max(dia_list)  # 대각선의 합 중 최대
 
