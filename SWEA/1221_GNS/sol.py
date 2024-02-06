@@ -7,8 +7,8 @@ num_dict = {'ZRO': 0, 'ONE': 1, 'TWO': 2, 'THR': 3, 'FOR': 4, 'FIV': 5, 'SIX': 6
 for _ in range(T):
     test, num = input().split()
     str_list = list(input().split())
-    # value로 정렬하고 그걸 다시 key로
     temp = []   # str_list를 순회하며 key값(ex. ZRO)을 넣을 임시 리스트
+
     for i in range(len(str_list)):
         # num_dict에서 str_list[i]를 키값으로 하는 value(숫자들)를 temp에 추가
         temp.append(num_dict.get(str_list[i]))
