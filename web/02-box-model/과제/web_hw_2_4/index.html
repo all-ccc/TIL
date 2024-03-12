@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body p {
+      color: blue;
+      padding-left: 30px;
+    }
+    div > p {
+      color: crimson;
+      padding-left: 0px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 
+    자손 결합자는 부모 밑에 있는 모든 요소에 적용되고, 
+    자식 결합자는 부모 바로 아래에 있는 직계 자식만 선택되는 것이다.
+  -->
+  <div>
+    <p>자식</p>
+  </div>
+
+  <p>손자</p>
+
+  <div>
+    <p>자식</p>
+  </div>
+
+
+</body>
+</html>

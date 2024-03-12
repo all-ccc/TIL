@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .card {
+      width: 400px;
+      height: 600px;
+      border: 1px solid black;
+    }
+    .image {
+      width: 100%;
+      position: relative;
+      text-align: center;
+    }
+    .name {
+      box-sizing: content-box;
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      margin: 0px;
+      transform: translate(-50%, 0%);
+      font-size: 38px;
+      background-color: rgba(255, 204, 157, 0.9);
+      padding: 5px 120px;
+    }
+
+    .content {
+      padding: 0px 30px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="image">
+      <img src="profile.jpg" alt="Profile Image">
+      <p class="name"><strong>Name</strong></p>
+    </div>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+  </div>
+</body>
+</html>

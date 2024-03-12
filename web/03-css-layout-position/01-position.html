@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1500px;
+    }
+
+    .container {
+      position: relative;   /* static이면 안됨 absolute 부모는 static X */
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+
+    .static {   
+      position: static;   /* position 값을 아무것도 주지 않았을 때 설정되는 기본값 */
+      background-color: lightcoral;
+    }
+
+    .absolute {
+      position: absolute;   /* 본인이 원래 있던 위치를 버리고 이동!! 
+                               새로운 기준점을 찾아야 함 -> static이 아닌 부모를 찾아감 */
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+    }
+
+    .relative {
+      position: relative;   /* 상대 위치: static일 때의 위치를 기준으로 이동
+                            -> 원래 위치에 아무것도 안 보이지만 영역은 남아있음
+                              (거길 기준으로 해야 하니까) */
+      background-color: lightblue;
+      top: 100px;   /* 아래로 이동함 */
+      left: 100px;  /* 오른쪽으로 이동함 */
+    }
+
+    .fixed {
+      position: fixed;    /* 우리가 스크롤 내려도 계속 고정 */
+      background-color: gray;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+  </div>
+</body>
+
+</html>
