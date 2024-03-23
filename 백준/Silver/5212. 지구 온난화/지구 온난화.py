@@ -17,10 +17,8 @@ for row in range(r):    # 0 1 2 3 4
                         cnt += 1        # cnt + 1
                 else:   # 범위 벗어나는 곳은 다 바다니까
                     cnt += 1
-                if cnt >= 3:    # 주변에 바다가 3면 미만이라면 (=안 잠김)
-                    after_50[row][col] = '.'
-                else:
-                    after_50[row][col] = 'X'
+            if cnt < 3:
+                after_50[row][col] = 'X'
 
 s_row, e_row, s_col, e_col = r+1, -1, c+1, -1   # 시작 행, 마지막 행, 시작 열, 마지막 열
 for i in range(r):
