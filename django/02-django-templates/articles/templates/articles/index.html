@@ -1,0 +1,10 @@
+  {% extends "articles/base.html" %}
+  {% comment %}
+    "" 안에 부모 태그의 경로 작성
+    나는 이제 저 부모 템플릿으로부터 확장하겠다(=상속 받겠다)
+    그 중에서 부모 템플릿의 body 쪽에 만들어 놓은 영역을 재정의 할 거다
+  {% endcomment %}
+
+  {% block content %}
+    <h1>안녕하세요, {{ name }}</h1>
+  {% endblock content %}

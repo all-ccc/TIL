@@ -1,0 +1,14 @@
+{% extends "articles/base.html" %}
+{% block content %}
+  <form action="https://search.naver.com/search.naver">
+    <label for="message">검색 : </label>
+    <input type="text" id="message" name="query"> 
+    <input type="submit">
+  </form>
+  {% comment %} 
+    - input에 name 역할
+      : 서버는 데이터를 key-value 형태로만 받음
+        이름표가 없으면 서버 측에서 사용자가 입력한 값에 접근 불가능
+        -> 이름표가 붙어야 함
+  {% endcomment %}
+{% endblock content %}

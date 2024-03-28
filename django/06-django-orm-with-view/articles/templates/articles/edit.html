@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit</h1>
+  <form action="{% url "articles:update" article.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ article.title }}"> 
+    {% comment %} value 속성 넣어야지 기존의 제목이 뜸 {% endcomment %}
+    <textarea name="content">{{ article.content }}</textarea>
+    {% comment %} textarea는 value 속성 없어서 걍 저기 안에 넣어줌 {% endcomment %}
+    <input type="submit">
+  </form>
+</body>
+</html>
