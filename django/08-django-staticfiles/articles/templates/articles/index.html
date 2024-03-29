@@ -1,0 +1,32 @@
+{% load static %}
+{% comment %}
+DTL : import 대신 load를 사용
+부모에서 load하면 자식들도 다 load된다? (X)
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="{% static "articles/sample-1.png" %}" alt="#">
+  {% comment %} /static 이후의 경로부터 작성 {% endcomment %}
+  <img src="{% static "sample-2.png" %}" alt="#">
+  {% comment %} 파일명 쓴 것 같지만 경로 쓴 거임 {% endcomment %}
+
+  <h1>Articles</h1>
+  <a href="{% url "articles:create" %}">CREATE</a>
+  <hr>
+  {% for article in articles %}
+    <p>글 번호: {{ article.pk }}</p>
+    <a href="{% url "articles:detail" article.pk %}">
+      <p>글 제목: {{ article.title }}</p>
+    </a>
+    <p>글 내용: {{ article.content }}</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>
