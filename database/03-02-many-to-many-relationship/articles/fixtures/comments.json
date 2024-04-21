@@ -1,0 +1,35 @@
+[
+{
+    "model": "articles.comment",
+    "pk": 1,
+    "fields": {
+        "article": 2,
+        "user": 1,
+        "content": "ㅎㅎㅎㅎ",
+        "created_at": "2024-04-09T00:35:27.823Z",
+        "updated_at": "2024-04-09T00:35:27.823Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 2,
+    "fields": {
+        "article": 1,
+        "user": 1,
+        "content": "우하하하",
+        "created_at": "2024-04-09T00:35:37.178Z",
+        "updated_at": "2024-04-09T00:35:37.178Z"
+    }
+},
+{
+    "model": "articles.comment",
+    "pk": 3,
+    "fields": {
+        "article": 1,
+        "user": 1,
+        "content": "할ㄹ오ㅜ",
+        "created_at": "2024-04-09T00:35:39.108Z",
+        "updated_at": "2024-04-09T00:35:39.108Z"
+    }
+}
+]
