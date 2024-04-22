@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // while
+    let i = 0
+    while (i < 6) {
+      // console.log(i)
+      i += 1
+    }
+
+
+    // for
+    // 초기문; 조건문; 증감문
+    // 조건이 거짓으로 판별될 때까지 반복
+    for (let i = 0; i < 6; i++) {
+      // i를 const로 하면 에러 뜸 (재할당 불가능하기 때문)
+      // console.log(i)
+    }
+
+
+    // for...in  -> 열거 가능한 속성을 출력(순서 보장 X)
+    // => 걍.. 객체에 쓴다!!! 순서가 중요한 배열에서는 사용 X
+    const fruits = {
+      a: 'apple',
+      b: 'banana'
+    }
+    for (const property in fruits) {
+      console.log(property)
+      console.log(fruits[property])
+    }
+
+
+    // for...of  -> 순서 있는 애들만 가능(순서 보장)
+    // 객체를 제외한 나머지 반복 가능한 객체들은 for나 이거 쓰면 됨
+    const numbers = ['a', 'b', 'c']
+
+    // 내부적으로는 이렇게 되어있다....
+    // numbers = {
+    //   0: 'a',
+    //   1: 'b',
+    //   2: 'c'
+    // }
+
+    for (const number of numbers) {
+      console.log(number)
+    }
+
+    // for (let number of numbers) {
+    //   console.log(number)
+    //   number += 1
+    // }
+
+    const myStr = 'apple'
+    for (const char of myStr) {
+      console.log(char)
+    }
+
+
+    // for...in 과 for...of 의 차이
+    const arr = ['a', 'b', 'c']
+
+  </script>
+</body>
+
+</html>

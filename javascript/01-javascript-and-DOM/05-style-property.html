@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>Lorem, ipsum dolor.</p>
+
+  <script>
+    // style 조작 (javascript에서도 가능.. 하지만 이건 css에서 하는 게 더 좋음)
+    const pTag = document.querySelector('p')
+
+    console.log(pTag.style)
+    pTag.style.color = 'crimson'
+    pTag.style.fontSize = '2rem'
+    pTag.style.border = '1px solid black'
+  </script>
+</body>
+
+</html>
