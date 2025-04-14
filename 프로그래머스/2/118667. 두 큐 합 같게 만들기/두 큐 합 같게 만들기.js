@@ -1,7 +1,7 @@
 function solution(queue1, queue2) {
     const queue = [...queue1, ...queue2];
     const n = queue1.length;
-    const maxCount = n * 4;
+    const maxCount = n * 3;
     
     const totalSum = queue.reduce((a, b) => a + b, 0);
     
